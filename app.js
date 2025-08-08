@@ -68,7 +68,7 @@ searchInput.addEventListener("keydown", (e) => {
   }
 });
 
-// getWeather("Lahore");
+ getWeather("pernambut");
 function imageGenerator(weather) {
   switch (weather) {
     case "Cloudy":
