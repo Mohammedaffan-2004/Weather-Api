@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather API</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-box">
+        <div class="search-wrapper">
+          <input
+            type="text"
+            class="search"
+            id="Searchbox"
+            placeholder="Search city..."
+          />
+          <i class="ri-search-line search-icon"></i>
+        </div>
+
+        <div class="weather-icon">
+          <img src="assests/suuny.png" alt="" />
+        </div>
+        <h1 class="temp" id="temp">30°C</h1>
+        <div class="locday">
+          <p class="location" id="location">Pernambut</p>
+          <p class="day" id="today">Monday</p>
+        </div>
+
+        <div class="weather-details">
+          <p id="weathertype"><i class="ri-cloudy-line"></i>Cloudy</p>
+          <p id="mintemp">
+            <i class="ri-temp-cold-line"></i> Min Temperature - 28°C
+          </p>
+          <p id="maxtemp">
+            <i class="ri-temp-hot-fill"></i> Max Temperature - 31°C
+          </p>
+        </div>
+        <div class="leftsm-box">
+          <div class="leftsml">
+            <img src="assests/water.png" alt="" />
+            <div class="leftsmll">
+              <p id="humidity">83%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="leftsmr">
+            <img src="assests/Wind Speed.png" alt="" />
+            <div class="leftsmrr">
+              <p id="wind">6 km/h</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  Right Boxs-->
+      <div class="right-box">
+        <div class="tabs">
+          <span>Today</span>
+          <span class="active">Week</span>
+        </div>
+
+        <div class="forecast-containers">
+          <div class="card">
+            <h4>Sun</h4>
+            <img src="assests/windyday.png" alt="" />
+            <p>31°</p>
+          </div>
+          <div class="card">
+            <h4>mon</h4>
+            <img src="assests/suuny.png" alt="" />
+            <p>31°</p>
+          </div>
+          <div class="card">
+            <h4>Tue</h4>
+            <img src="assests/Cloudy.png" alt="" />
+            <p>26°</p>
+          </div>
+          <div class="card">
+            <h4>wed</h4>
+            <img src="assests/lightrainnight.png" alt="" />
+            <p>30°</p>
+          </div>
+          <div class="card">
+            <h4>thu</h4>
+            <img src="assests/HeavyRain.png" alt="" />
+            <p>31°</p>
+          </div>
+
+          <div class="card">
+            <h4>Fri</h4>
+            <img src="assests/HeavyRain.png" alt="" />
+            <p>31°</p>
+          </div>
+
+          <div class="card">
+            <h4>Sat</h4>
+            <img src="assests/lightrainnight.png" alt="" />
+            <p>31°</p>
+          </div>
+        </div>
+
+        <div class="todayov">
+          <h4>Today's overview</h4>
+        </div>
+        <div class="overview">
+          <div class="box">
+            <div class="label">Air Quality Index</div>
+            <h3 id="Air">53</h3>
+            <div class="labelimg">
+              <div class="label1">Good</div>
+
+              <img src="assests/good.png" alt="" />
+            </div>
+          </div>
+          <div class="box">
+            <div class="label">UV Index</div>
+            <h3 id="uv">3</h3>
+            <div class="labelimg">
+              <div class="label2">Moderate</div>
+
+              <img src="assests/moderate.png" alt="" />
+            </div>
+          </div>
+          <div class="box">
+            <div class="label">Pressure (hPa)</div>
+            <h3 id="Pressure">1006</h3>
+            <div class="labelimg">
+              <div class="label3">Normal</div>
+
+              <img src="assests/Normal.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="graph-section">
+            <h3>7-Day Temperature Forecast</h3>
+            <canvas id="forecastChart" width="400" height="200"></canvas>
+          </div>
+
+          <div class="sun-box box">
+            <h4 class="sunn">Sunrise & Sunset</h4>
+            <div class="ss">
+              <img src="assests/Icon.png" alt="" />
+              <div class="scontent">
+                <h6>Sunrise</h6>
+                <h4 id="sunrise">7.06AM</h4>
+              </div>
+            </div>
+            <div class="ss">
+              <img src="assests/Sunset.png" alt="" />
+              <div class="scontent">
+                <h6>Sunset</h6>
+                <h4 id="sunset">7.03PM</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
